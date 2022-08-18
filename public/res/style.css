@@ -1,0 +1,192 @@
+.paper{
+    height:500px;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left:30%;
+}
+body{
+    background-image:url(../../src/);
+}
+.paper h1{
+    margin:20px;
+    color: rgb(84, 146, 255);
+}
+.paper .input{
+    margin: 20px;
+}
+.btn-field{
+    display: flex;
+    flex-direction: row;
+    margin: 10%;
+    margin-left:20px;
+    position: absolute;
+    bottom: 10px;
+}
+.btn-field button{
+    margin: 40px;
+    width:150px;
+}
+
+.global{
+    margin:1%;
+    margin-left:7%;
+    align-items: center;
+    text-align: center;
+}
+.global .logout{
+    margin-top: 10%;
+}
+.connected{
+    color: rgb(84, 146, 255);
+}
+.datatables thead{
+    background-color: rgb(255, 65, 65);
+}
+.datatables{
+    width:100%;
+}
+.drinks{
+    border: 1px solid rgb(255, 65, 65);
+    height:460px; 
+    margin-bottom:4%;   
+    overflow-y: scroll;
+}
+.datatables thead th{
+    border: 1px solid rgb(255, 65, 65);
+}
+.datatables .categorie{
+    width: 50%;
+}
+.datatables td{
+    color: rgb(135, 133, 133);
+    border: 1px solid rgb(27, 26, 26);
+}
+.list-div{
+    border: 1px solid rgb(92, 56, 56);
+    position: relative;
+}
+.css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon{
+    color: rgb(255, 65, 65);
+}
+.list-div .css-8je8zh-MuiTouchRipple-root{
+    border:1px solid rgb(255, 68, 68)
+}
+.list-div .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root{
+    color: rgb(255, 65, 65) !important;
+}
+.pagination{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.modale{
+    background-color: rgba(19, 18, 18, 0.805);
+    background-position: center;
+    width:500px;
+    position: fixed;
+    top:50px;
+    left:33%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.btn-custom{
+    margin-top: 5px !important;
+}
+h1{
+    color:rgb(255, 65, 65);
+}
+.modale input{
+    margin:10px;
+    background-color: rgb(33, 32, 32);
+    outline: none;
+    color:rgb(159, 157, 157);
+    border: 1px solid rgb(255, 65, 65);
+    border-radius: 5px;
+}
+.modale p{
+    margin:5px;
+    text-align: center;
+    color: rgb(159, 157, 157);
+}
+.hide{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.622);
+    z-index:99;
+}
+.modale-head{
+    background-color:rgb(255, 65, 65) ;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.cocktailList{
+    overflow-y: scroll;
+    border: 1px solid rgb(255, 65, 65);
+    height:500px
+}
+.listCocktail div{
+    text-align: center;
+    color: rgb(24, 24, 24);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em;
+    background-color:rgba(255, 65, 65, 0.946);
+    margin: 10px;
+}
+.listCocktail p{
+    text-align: start;
+    margin:10px;
+    color: rgb(159, 157, 157)
+}
+.listCocktail h5{
+    text-align: start;
+    margin:10px;
+    color: rgba(255, 65, 65, 0.946)
+}
+.btn-cocktail:hover{
+    background-color:rgba(255, 65, 65, 0.946);
+    color: rgb(24, 24, 24);
+    border: none;
+    border: 1px solid rgba(255, 65, 65, 0.946);
+    border-radius: 2px;
+    padding: 5px;
+    transition-duration:300ms;
+}
+.btn-cocktail{
+    background-color:rgba(0, 0, 0, 0);
+    color: rgba(255, 65, 65, 0.946);
+    border: 1px solid rgba(255, 65, 65, 0.946);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.modale-cocktail{
+    width:800px !important;
+    left:20% !important;
+}
+.row-input{
+    display: flex;
+    flex-direction: row;
+}
+/* scroll bar */
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    border-left:1px solid rgba(255, 65, 65, 0.831);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 65, 65, 0.472);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 65, 65, 0.831);
+  }

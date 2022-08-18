@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import './Login.css'
 import { createUser, authentificateUser } from './authentification-provider'
 import { Auth, getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +24,6 @@ export default function (): React.ReactElement {
 
     function handleclick() {
         authentificateUser(mail, pwd);
-        console.log(auth)
     }
     return (
         <>
