@@ -112,6 +112,11 @@ h1{
     text-align: center;
     color: rgb(159, 157, 157);
 }
+.to_drinks{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
 .hide{
     width: 100%;
     height: 100%;
@@ -129,7 +134,8 @@ h1{
 .cocktailList{
     overflow-y: scroll;
     border: 1px solid rgb(255, 65, 65);
-    height:500px
+    height:460px;
+    margin-bottom: 4%;
 }
 .listCocktail div{
     text-align: center;

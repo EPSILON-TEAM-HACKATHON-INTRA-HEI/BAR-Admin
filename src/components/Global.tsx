@@ -12,8 +12,10 @@ export default function (): React.ReactElement {
   const [newCocktail,setnewCocktail]=useState<boolean>(false)
   const [newDrinks,setNewDrinks]=useState<boolean>(false)
   const [toggleToOther,setToggleToOther]=useState<boolean>(false)
+  const [currentDrink,setCurrentDrink]=useState<any>()
   const navigate = useNavigate()
-  function displayUpdateModale(){
+  function displayUpdateModale(data:any|undefined){
+      setCurrentDrink(data)
       setUpdateModale(!updateModale)
   }
   function newDrinks_ok(){
@@ -59,12 +61,12 @@ export default function (): React.ReactElement {
     }
   ]
   return (<>
-    {updateModale && <Modale toggle={displayUpdateModale}/>}
+    {updateModale && <Modale toggle={displayUpdateModale} currentDrink={currentDrink}/>}
     {newCocktail&& <Modale_newCocktail boissons={test} toggle={displaynewCocktailMenu}/>}
     {newDrinks&& <Modale_new_drinks toggle={newDrinks_ok}/>}
 
     <div className="bg-ok"></div>
-    <div className="global" style={(()=>(updateModale?{filter:"blur(3px)"}:{}))()}>
+    <div className="global" style={(()=>((updateModale || newCocktail || newDrinks)?{filter:"blur(3px)"}:{}))()}>
       {toggleToOther?
        <List_cocktail toggle={displayUpdateModale} toogleToOther={toogleToAnother} newCocktail={displaynewCocktailMenu}/>:
        <List_boissons toogleNew={newDrinks_ok} toggle={displayUpdateModale} toogleToOther={toogleToAnother}/>

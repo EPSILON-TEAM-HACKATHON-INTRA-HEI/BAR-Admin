@@ -1,10 +1,41 @@
-import React, { MouseEvent, MouseEventHandler } from 'react';
+import React, { MouseEvent, MouseEventHandler, useEffect, useState } from 'react';
 import { Button, Pagination } from "@mui/material";
+import axios from 'axios';
 export default function (props:{toggle:MouseEventHandler<HTMLTableCellElement>,toogleNew:MouseEventHandler<HTMLButtonElement>,toogleToOther:MouseEventHandler<HTMLButtonElement>}): React.ReactElement {
     const {toggle,toogleToOther,toogleNew}=props;
+    const [data,setData]=useState<any>();
+    useEffect(()=>{
+        axios.get("https://bar-admin.herokuapp.com/drinks",{
+        auth:{
+            username:"test",
+            password:"test"
+        }
+    }).then((data)=>{setData(data)}).catch((Err)=>{console.log(Err)})
+
+    })
+    const test=[
+        {
+          "id": 0,
+          "Name": "adfjadsf",
+          "UnitPrice": 123,
+          "Category": "strasdfas"
+        },
+        {
+            "id": 0,
+            "Name": "strasfadsf",
+            "UnitPrice": 123,
+            "Category": "sasdfasdag"
+          },
+          {
+            "id": 0,
+            "Name": "strsadaf",
+            "UnitPrice": 32,
+            "Category": "stradfasdg"
+          }
+      ]
     return (
         <div className="card-body list-div col-11">
-            <h1>drinks</h1><button onClick={toogleToOther}>to cocktail</button>
+            <h1>drinks</h1>
             <div className='drinks'>
             <table className="datatables">
                 <thead>
@@ -16,12 +47,20 @@ export default function (props:{toggle:MouseEventHandler<HTMLTableCellElement>,t
                     </tr>
                 </thead>
                 <tbody>
-                    <Row boisson='haha' prix={12200} categorie="non-alcoliser" update={toggle}/>
+                    {/* {data !== undefined && data.map((i:any)=>(
+                        <Row boisson={i.Name} prix={i.UnitPrice} categorie={i.Category} update={()=>{toggle(i)}}/>
+                    ))} */}
+                    {
+                        test.map((i:any)=>(
+                        <Row boisson={i.Name} prix={i.UnitPrice} categorie={i.Category} update={()=>{toggle(i)}}/>
+                        ))
+                    }
                 </tbody>
             </table>
             </div>
             <Pagination className='pagination' />
             <button onClick={toogleNew} className="btn-cocktail">new cocktail</button>
+            <button onClick={toogleToOther} className="btn-cocktail to_drinks">{"to cocktail -->"} </button>
             
         </div>
     )
