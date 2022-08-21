@@ -7,8 +7,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,11 +19,4 @@ public class Category implements Serializable {
     private Integer id;
     @Column(name = "category_name")
     private String name;
-    @OneToMany
-    @JoinTable(
-            name="Drinks_category",
-            joinColumns = @JoinColumn(name = "category_id"),
-            inverseJoinColumns = @JoinColumn(name = "drink_id")
-    )
-    private List<Drinks> drinks = new ArrayList<>();
 }
