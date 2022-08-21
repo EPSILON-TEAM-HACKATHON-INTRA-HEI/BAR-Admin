@@ -21,10 +21,7 @@ public class Drinks implements Serializable {
     private String name;
     @Column(name = "unite_price")
     private Long price;
-    @OneToOne
-    @JoinColumn(name = "fk_category_id")
-    private Category category;
     @ManyToOne
-    @JoinColumn(name = "compositions_id")
-    private Compositions compositions;
+    @JoinColumn(name = "category_id")
+    private Category category;
 }
