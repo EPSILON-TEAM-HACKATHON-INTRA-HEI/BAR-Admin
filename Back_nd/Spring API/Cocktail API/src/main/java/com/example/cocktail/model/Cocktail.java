@@ -15,7 +15,8 @@ import java.io.Serializable;
 @Entity
 public class Cocktail implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "cocktail_name",nullable = false,unique = true)
+    @Column(nullable = false,unique = true)
     private String name;
 }
