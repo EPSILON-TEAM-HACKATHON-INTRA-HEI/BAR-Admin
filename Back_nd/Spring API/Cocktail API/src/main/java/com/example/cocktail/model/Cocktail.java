@@ -18,7 +18,4 @@ public class Cocktail implements Serializable {
     private Integer id;
     @Column(name = "cocktail_name",nullable = false,unique = true)
     private String name;
-    @ManyToOne
-    @JoinColumn(name = "compositions_id")
-    private Compositions compositions;
 }
