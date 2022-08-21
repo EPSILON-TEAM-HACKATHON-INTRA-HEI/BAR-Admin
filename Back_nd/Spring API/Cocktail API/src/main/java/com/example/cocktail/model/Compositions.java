@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,11 +18,7 @@ public class Compositions {
     @ManyToOne
     @JoinColumn(name = "cocktail_id")
     private Cocktail cocktail;
-    @OneToMany
-    @JoinTable(
-            name = "Drinks_Compositions",
-            joinColumns = @JoinColumn(name = ""),
-            inverseJoinColumns = @JoinColumn(name = "")
-    )
-    private List<Drinks> drinks;
+    @ManyToOne
+    @JoinColumn(name = "drinks_id")
+    private Drinks drinks;
 }
