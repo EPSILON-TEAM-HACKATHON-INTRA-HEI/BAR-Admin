@@ -14,11 +14,10 @@ import javax.persistence.*;
 @Entity
 public class Compositions {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
-    @JoinColumn(name = "cocktail_id")
     private Cocktail cocktail;
     @ManyToOne
-    @JoinColumn(name = "drinks_id")
     private Drinks drinks;
 }
