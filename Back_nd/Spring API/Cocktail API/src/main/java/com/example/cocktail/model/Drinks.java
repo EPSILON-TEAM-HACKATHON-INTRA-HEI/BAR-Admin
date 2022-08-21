@@ -16,12 +16,11 @@ import java.io.Serializable;
 
 public class Drinks implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "drink_name",nullable = false)
+    @Column(nullable = false)
     private String name;
-    @Column(name = "unite_price")
     private Long price;
     @ManyToOne
-    @JoinColumn(name = "category_id")
     private Category category;
 }
