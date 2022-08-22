@@ -17,7 +17,7 @@ public class DrinkController {
     public Drinks AddNewDrink (@RequestBody Drinks drinks){
         return drinkService.save(drinks);
     }
-    @GetMapping("/drinks/")
+    @GetMapping("/drinks")
     public List<Drinks> getDrinks()
     /**(int page, int pageSize)**/{
         return drinkService.getAll();
