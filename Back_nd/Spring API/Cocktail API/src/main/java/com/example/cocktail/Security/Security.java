@@ -23,10 +23,9 @@ public class Security extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests()
-                .antMatchers( HttpMethod.GET ,"/").permitAll()
-                .antMatchers(HttpMethod.GET, "/drinks/**").hasRole("admin")
+                .antMatchers( HttpMethod.GET ,"/cocktails/").permitAll()
                 .antMatchers(HttpMethod.GET, "categories/**").hasRole("admin")
-                .antMatchers(HttpMethod.GET,"cocktails/**").hasRole("admin")
+                .antMatchers(HttpMethod.GET,"drinks/**").hasRole("admin")
                 .antMatchers(HttpMethod.GET,"compositions/**").hasRole("admin")
                 .antMatchers(HttpMethod.POST,"**/**").hasRole("admin")
                 .antMatchers(HttpMethod.PATCH,"**/**").hasRole("admin")
