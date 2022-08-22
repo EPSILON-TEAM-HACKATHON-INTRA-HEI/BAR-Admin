@@ -100,8 +100,8 @@ export function Modale_newCocktail(props: { toggle: MouseEventHandler<HTMLDivEle
     useEffect(()=>{
         axios.get("https://bar-admin.herokuapp.com/drinks",{
         auth:{
-            username:"test",
-            password:"test"
+            username:"admin",
+            password:"admin"
         }
     }).then((data)=>{setData(data)}).catch((Err)=>{console.log(Err)})
 
