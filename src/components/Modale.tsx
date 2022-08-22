@@ -17,8 +17,8 @@ export default function (props: { toggle: MouseEventHandler<HTMLDivElement> , cu
                 }
             ], {
                 auth: {
-                    username: "test",
-                    password: "test"
+                    username: "admin",
+                    password: "admin"
                 }
             })
         }
@@ -52,8 +52,8 @@ export function Modale_new_drinks(props: { toggle: MouseEventHandler<HTMLDivElem
             }
         ], {
             auth: {
-                username: "test",
-                password: "test"
+                username: "admin",
+                password: "admin"
             }
         })
     }
@@ -77,8 +77,8 @@ function Categories(props: { onchange: any, value: any }): React.ReactElement {
     useEffect(() => {
         axios.get("https://bar-admin.herokuapp.com/Categories", {
             auth: {
-                username: "test",
-                password: "test"
+                username: "admin",
+                password: "admin"
             }
         }).then((Data) => {
             setData(Data);
